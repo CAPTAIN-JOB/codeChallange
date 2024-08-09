@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
+import TransactionForm from "./TransactionForm";
 export const url = "http://localhost:3000/transactions";
 
 function Home() {
@@ -53,6 +54,10 @@ function Home() {
 						))}
 				</tbody>
 			</table>
+			<TransactionForm
+				transaction={transactions}
+				setTransactions={setTransactions}
+			/>
 		</main>
 	);
 }
