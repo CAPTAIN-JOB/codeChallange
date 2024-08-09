@@ -25,6 +25,7 @@ function TransactionForm({ transaction, setTransaction }) {
 		})
 			.then((res) => res.json())
 			.then((data) => setTransaction([data, ...transaction]));
+		setFormData("");
 	};
 
 	return (
